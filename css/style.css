@@ -1,0 +1,65 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+li { list-style-type: none; }
+a { text-decoration: none; color: inherit; }
+body { font-family: 'Pretendard-Regular'; }
+
+/* common-공통 */
+.inner { width: 1100px; margin: 0 auto; position: relative; }
+
+
+/* header */
+header { width: 100%; border-bottom: 1px solid #ddd; }
+header > .inner { height: 120px; }
+header h1 { position: absolute; left: 0; bottom: 15px; }
+header h1 a { font: 700 24px/1 'Pretendard-Regular'; color: #444; }
+
+header .util { display: flex; position: absolute; top: 20px; right: 30px; }
+header .util a { display: block; font-size: 12px; color: #999; padding: 5px 10px; }
+header .gnb { display: flex; position: absolute; bottom: 0; right: 0; }
+header .gnb li a { display: block; font-weight: 700; padding: 20px 40px; transition: .5; color: #555; }
+header .gnb li:hover a { background-color: #555; color: #fff; }
+
+/* nav응용!
+header .bg_box { position: absolute; left: 0; top: 120px; width: 100vw; height: 0; background-color: #ffa450; margin-left: calc(-1*((100vw - 1100px)/2)); transition: .5s; overflow: hidden; }
+header .gnb:hover ~ .bg_box { height: 300px; }
+header .bg_box .inner_contents { background-color: #999; height: 100px; position: absolute; width: 100%; bottom: 0; left: 0; } 
+*/
+
+/* figure */
+figure { width: 100%; height: calc(100vh - 120px); background-color: #000; position: relative; overflow: hidden; padding-top: 180px; }
+figure video { object-fit: cover; width: 100%; height: 100%; opacity: .3; position: absolute; top: 0; left: 0; }
+figure h1 { font-size: 120px; color: #fff; margin-bottom: 20px; }
+figure p { font-size: 16px; color: #888; margin-bottom: 60px; }
+figure a { display: block; width: 400px; height: 30px; border: 1px solid #bbb; font: 600 11px/30px 'arial'; color: #fff; text-align: center; letter-spacing: 1px; transition: .5s; }
+figure a:hover { background-color: #fff; color: #555; }
+
+/* section - news */
+section { width: 100%; padding: 200px 0; }
+section h1 { font-size: 24px; text-align: center; margin-bottom: 50px; }
+section .wrap { width: 100%; display: flex; gap: 20px; justify-content: center; }
+/* x축으로 정렬 justify-content 사용 */
+section .wrap article { width: 200px; }
+section .wrap article h2 { margin-bottom: 10px; }
+section .wrap article h2 a { font: 800 16px/1 'arial'; color: #555; }
+section .wrap article p { font: 14px/1.4 'arial'; color: #777; }
+section .wrap article .pic { width: 100%; height: 120px; background-color: #333; margin-bottom: 15px; position: relative; overflow: hidden; }
+section .wrap article .pic img { width: 100%; height: 100%; object-fit: cover; }
+
+/* footer */
+footer { width: 100%; background-color: #ececec; padding: 100px 0; border-top: 2px solid #777; }
+footer .upper { display: flex;  justify-content: space-between; width: 100%; border-bottom: 1px solid #777; padding-bottom: 20px; }
+footer .upper h1 { font: 700 24px/1 'arial'; color: #666; }
+footer .upper ul { display: flex; }
+footer .upper ul li a { font-weight: 600; font-size: 12px; color: #333; display: block; padding: 5px 10px; }
+footer .lower { width: 100%; padding-top: 20px; }
+footer .lower address { width: 100%; font-size: 12px; color: #777; margin-bottom: 20px; line-height: 1.5; }
+footer .lower p { width: 100%; font-size: 12px; color: #777; font-weight: 700; }
